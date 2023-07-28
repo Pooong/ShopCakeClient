@@ -1,7 +1,23 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+    plugins: [react()],
+    server: {
+        proxy: {
+            "/api": {
+                target: "http://localhost:8080",
+                changeOrigin: true,
+                secure: false,
+                ws: true,
+            },
+        },
+    },
+    resolve: {
+        alias: {
+            "~": "/src", // Định nghĩa alias cho đường dẫn tương đối
+            // Thêm các alias khác nếu cần
+        },
+    },
+});

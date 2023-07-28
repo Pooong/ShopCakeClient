@@ -1,0 +1,56 @@
+@import "normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+:root {
+    --primary: #493414;
+    --black: #000;
+    --pink: #be1558;
+    --white: #fff;
+    --text-color: #000;
+    --df-layout-header-h: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-weight: 500;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+}
+
+button,
+input,
+[tabindex] {
+    font-family: "Quicksand", sans-serif;
+    outline: none;
+    border: none;
+}
+
+a,
+button {
+    background-color: transparent;
+    user-select: none;
+    font-family: "Quicksand", sans-serif;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+}

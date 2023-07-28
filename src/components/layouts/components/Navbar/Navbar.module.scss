@@ -1,0 +1,24 @@
+.wrapper {
+    display: flex;
+}
+
+.link {
+    font-size: 16px;
+    padding: 8px;
+    position: relative;
+    &::after {
+        content: "";
+        width: 0;
+        position: absolute;
+        transition: all 0.3s;
+        left: 0px;
+        top: 99%;
+        border-top: 3px solid var(--pink);
+    }
+    &:hover {
+        color: var(--pink);
+        &::after {
+            width: 100%;
+        }
+    }
+}
