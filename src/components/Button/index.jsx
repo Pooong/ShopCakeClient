@@ -5,16 +5,18 @@ import { Link } from "react-router-dom";
 
 const cx = classNames.bind(styles);
 
+//Có thể truyền Ref cho button
 const Button = forwardRef(
     (
         {
             to,
             href,
+            //Dạng của button
             primary = false,
             outline = false,
             text = false,
             icon = false,
-            rounded = false,
+            //Size của Button
             small,
             large,
             className,
@@ -41,7 +43,6 @@ const Button = forwardRef(
             outline,
             text,
             icon,
-            rounded,
             small,
             large,
         });

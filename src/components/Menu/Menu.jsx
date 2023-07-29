@@ -35,7 +35,7 @@ const Menu = ({ items, buttonOpen, openMenu, setOpenMenu }) => {
             }}>
             {items.map((item, index) => (
                 <li key={index}>
-                    <Button className={cx("link")} to={item.to}>
+                    <Button className={cx("item")} to={item.to}>
                         {item.name}
                     </Button>
                 </li>

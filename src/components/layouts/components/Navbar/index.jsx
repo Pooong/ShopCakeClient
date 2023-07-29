@@ -79,7 +79,6 @@ function Navbar() {
                 <Button icon>
                     <LiaShoppingBasketSolid />
                 </Button>
-                {/* <Menu></Menu> */}
             </div>
         </div>
     );

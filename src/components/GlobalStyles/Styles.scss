@@ -2,12 +2,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 :root {
-    --primary: #493414;
+    --primary: #644734;
     --black: #000;
     --pink: #be1558;
+    --orange: #ff813f;
     --white: #fff;
     --text-color: #000;
     --df-layout-header-h: 80px;
+    --df-padding-x: 24px;
+}
+
+@media (max-width: 576px) {
+    :root {
+        --df-padding-x: 8px;
+    }
 }
 
 * {
@@ -53,4 +61,8 @@ a {
 
 ul {
     padding: 0;
+}
+
+.page {
+    padding: 0 var(--df-padding-x);
 }

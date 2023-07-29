@@ -1,4 +1,5 @@
 .wrapper {
+    background-color: var(--white);
     height: var(--df-layout-header-h);
     width: 100%;
     top: 0;
@@ -6,13 +7,21 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 32px;
+    padding: 0 var(--df-padding-x);
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    z-index: 99;
 }
 
 .logo {
     height: 64px;
     img {
         height: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .wrapper {
+        padding: 0 12px;
     }
 }
