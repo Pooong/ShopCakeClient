@@ -62,6 +62,10 @@ a {
 ul {
     padding: 0;
 }
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+}
 
 .page {
     padding: 0 var(--df-padding-x);

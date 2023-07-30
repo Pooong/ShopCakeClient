@@ -4,7 +4,6 @@
     width: 100%;
     top: 0;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 0 var(--df-padding-x);
@@ -22,6 +21,6 @@
 
 @media (max-width: 576px) {
     .wrapper {
-        padding: 0 12px;
+        padding: 0 8px;
     }
 }
