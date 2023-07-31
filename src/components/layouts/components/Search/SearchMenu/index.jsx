@@ -1,9 +1,10 @@
 import classNames from "classnames/bind";
 import { useEffect } from "react";
 import styles from "../Search.module.scss";
-import { Link } from "react-router-dom";
+import { CardMenu } from "~/components/Card";
 const cx = classNames.bind(styles);
-function SearchMenu({ searchRef, setShowResults, setSearchResults }) {
+
+function SearchMenu({ items, searchRef, setShowResults, setSearchResults }) {
     useEffect(() => {
         function handleClickOutSide(e) {
             if (!searchRef.current.contains(e.target)) {
@@ -18,48 +19,9 @@ function SearchMenu({ searchRef, setShowResults, setSearchResults }) {
     }, []);
     return (
         <div className={cx("search-menu")}>
-            <Link className={cx("search-card")} to={"/"}>
-                <div className={cx("thumbnail")}>
-                    <img
-                        src="/src/assets/ProductCake/pngwing.com (1).png"
-                        alt=""
-                    />
-                </div>
-                <div className={cx("infor")}>
-                    <span className={cx("name")}>
-                        Bánh kem dâu socola vị ngon siêu cấp
-                    </span>
-                    <span className={cx("price")}>500 000</span>
-                </div>
-            </Link>
-            <Link className={cx("search-card")} to={"/"}>
-                <div className={cx("thumbnail")}>
-                    <img
-                        src="/src/assets/ProductCake/pngwing.com (1).png"
-                        alt=""
-                    />
-                </div>
-                <div className={cx("infor")}>
-                    <span className={cx("name")}>
-                        Bánh kem dâu socola vị ngon siêu cấp
-                    </span>
-                    <span className={cx("price")}>500 000</span>
-                </div>
-            </Link>
-            <Link className={cx("search-card")} to={"/"}>
-                <div className={cx("thumbnail")}>
-                    <img
-                        src="/src/assets/ProductCake/pngwing.com (1).png"
-                        alt=""
-                    />
-                </div>
-                <div className={cx("infor")}>
-                    <span className={cx("name")}>
-                        Bánh kem dâu socola vị ngon siêu cấp
-                    </span>
-                    <span className={cx("price")}>500 000</span>
-                </div>
-            </Link>
+            {items.map((item, index) => (
+                <CardMenu key={index} item={item} small />
+            ))}
         </div>
     );
 }

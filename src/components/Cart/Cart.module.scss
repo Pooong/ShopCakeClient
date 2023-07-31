@@ -1,0 +1,22 @@
+.cart {
+    .cart-header {
+        padding: 24px 12px;
+        button {
+            font-size: 2rem;
+            &:focus {
+                box-shadow: 0 0 1px 1px var(--primary);
+            }
+        }
+        .cart-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+    }
+
+    .cart-content {
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}

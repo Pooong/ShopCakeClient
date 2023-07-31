@@ -1,0 +1,37 @@
+.wrapper {
+    min-width: 80px;
+    transition: 0.3s all linear;
+    padding: 8px 0;
+    border: 2px solid var(--pink);
+    background-color: var(--pink);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+
+    .icon {
+        background-color: #fff;
+        color: var(--pink);
+        margin-bottom: 4px;
+    }
+
+    .type {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: var(--white);
+    }
+    &:hover {
+        background-color: #fff;
+        .icon {
+            background-color: var(--pink);
+            color: var(--white);
+        }
+        .type {
+            color: var(--pink);
+        }
+    }
+    + .wrapper {
+        margin-left: 20px;
+    }
+}

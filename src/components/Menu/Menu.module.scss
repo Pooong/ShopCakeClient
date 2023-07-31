@@ -17,10 +17,16 @@ li + li {
     border-top: 1px solid #ccc;
 }
 .item {
+    border-radius: 0px;
     width: 100%;
-    font-size: 16px;
+    font-size: 1.6rem;
     padding: 8px 0;
     &:hover {
         color: var(--pink);
     }
+}
+
+.item.especially {
+    color: var(--pink);
+    font-weight: 600;
 }

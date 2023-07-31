@@ -4,7 +4,7 @@ import styles from "./Slider.module.scss";
 
 const cx = classNames.bind(styles);
 
-function Slider({ items }) {
+function Slide({ items }) {
     return (
         <Carousel data-bs-theme="dark">
             {items.map((item, index) => {
@@ -22,4 +22,4 @@ function Slider({ items }) {
     );
 }
 
-export default Slider;
+export default Slide;

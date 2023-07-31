@@ -9,12 +9,18 @@
     --white: #fff;
     --text-color: #000;
     --df-layout-header-h: 80px;
-    --df-padding-x: 24px;
+    --df-padding-x: 32px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
     :root {
-        --df-padding-x: 8px;
+        --df-padding-x: 12px;
+    }
+}
+
+@media (max-width: 574) {
+    :root {
+        --df-padding-x: 12px;
     }
 }
 
