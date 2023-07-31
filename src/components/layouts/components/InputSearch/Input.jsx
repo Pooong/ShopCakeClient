@@ -4,12 +4,33 @@ import InputGroup from "react-bootstrap/InputGroup";
 import styles from "./Input.module.scss";
 import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
+import axios from "~/axios";
 
+import { useState } from "react";
+import instance from "../../../../axios";
 function Input() {
+	const [searchValue, setSearchValue] = useState("");
+
+	//Lay du lieu o input
+	const handleInputChange = (event) => {
+		// console.log(event.target.value);
+		setSearchValue(event.target.value);
+	};
+
+	const handleSearchClick = () => {
+		instance
+			.get("/api/cake/show/showbysearch", { params: { cakeName: searchValue } })
+			.then((res) => {
+				if (res.status === 200) console.log(res.data);
+			})
+			.catch((error) => {
+				console.error("Error:", error);
+			});
+	};
 	return (
 		<>
 			<div className={cx("search")}>
-				<input type="text" placeholder="Search" spellCheck={false} />
+				<input type="text" placeholder="Search" spellCheck={false} onChange={handleInputChange} />
 
 				<button className={cx("clear")}>
 					<svg
@@ -42,7 +63,7 @@ function Input() {
 
 				{/* Loading */}
 
-				<button className={cx("search-btn")}>
+				<button className={cx("search-btn")} onClick={handleSearchClick}>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"

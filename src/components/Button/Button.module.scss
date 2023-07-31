@@ -12,8 +12,11 @@
 }
 
 .icon {
-    min-width: 56px !important;
-    font-size: 28px;
+    padding: 0;
+    height: 44px;
+    min-width: 44px;
+    font-size: 2.8rem;
+    border-radius: 50%;
 }
 
 .primary {
@@ -45,4 +48,16 @@
 
 .large {
     min-width: 144px;
+}
+
+.icon.small {
+    height: 40px;
+    min-width: 40px;
+    font-size: 2.4rem;
+}
+
+.icon.large {
+    height: 48px;
+    min-width: 48px;
+    font-size: 3.2rem;
 }
