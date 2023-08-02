@@ -36,6 +36,7 @@ const Menu = ({ items, buttonOpen, openMenu, setOpenMenu }) => {
             {items.map((item, index) => (
                 <li key={index}>
                     <Button
+                        to={item.to}
                         className={cx("item", {
                             especially: item.especially,
                         })}>

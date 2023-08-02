@@ -5,6 +5,7 @@ import Title from "~/components/Title";
 import CardAbout from "~/components/CardAbout";
 import { useEffect, useState } from "react";
 import instance from "~/axios";
+import { GiDonut } from "react-icons/gi";
 import { LuCandy } from "react-icons/lu";
 import { FaBirthdayCake, FaPizzaSlice } from "react-icons/fa";
 import { IoIosIceCream } from "react-icons/io";
@@ -62,14 +63,15 @@ const type = [
         to: "#",
     },
     {
-        type: "Pizza",
-        icon: FaPizzaSlice,
+        type: "Donut",
+        icon: GiDonut,
         to: "#",
     },
 ];
 
 function Home() {
     const [products, setProducts] = useState([]);
+    const [typeActive, setTypeActive] = useState("All product");
 
     useEffect(() => {
         instance.get("/api/product/show").then((res) => {
@@ -85,7 +87,11 @@ function Home() {
                 <Container items={products} sizeS={2} sizeM={3} sizeL={4} />
                 <Title primary>Type Products</Title>
                 <div className="mb-5">
-                    <ListType items={type} />
+                    <ListType
+                        items={type}
+                        typeActive={typeActive}
+                        setTypeActive={setTypeActive}
+                    />
                 </div>
                 <div className="mb-5">
                     <Container

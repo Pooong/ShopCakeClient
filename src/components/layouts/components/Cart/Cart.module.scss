@@ -1,4 +1,5 @@
 .cart {
+    width: 480px !important;
     .cart-header {
         padding: 24px 12px;
         button {
@@ -18,5 +19,11 @@
         &::-webkit-scrollbar {
             display: none;
         }
+    }
+}
+
+@media (max-width: 576px) {
+    .cart {
+        width: 100% !important;
     }
 }

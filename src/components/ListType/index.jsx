@@ -1,12 +1,10 @@
-import { useState } from "react";
 import classNames from "classnames/bind";
 import ButtonType from "../ButtonType";
 import styles from "./ListType.module.scss";
 
 const cx = classNames.bind(styles);
 
-function ListType({ items, className }) {
-    const [indexTypeActive, setIndexTypeActive] = useState(0);
+function ListType({ items, typeActive, setTypeActive, className }) {
     return (
         <div
             className={`d-flex justify-content-center w-100 ${cx("wrapper", {
@@ -16,10 +14,10 @@ function ListType({ items, className }) {
                 {items.map((item, index) => {
                     return (
                         <ButtonType
-                            active={index == indexTypeActive}
+                            active={item.type == typeActive}
                             key={index}
                             item={item}
-                            onClick={() => setIndexTypeActive(index)}
+                            onClick={() => setTypeActive(item.type)}
                         />
                     );
                 })}
