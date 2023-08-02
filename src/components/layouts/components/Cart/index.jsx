@@ -1,14 +1,14 @@
 import Offcanvas from "react-bootstrap/Offcanvas";
 import classNames from "classnames/bind";
 import styles from "./Cart.module.scss";
-import Title from "../Title";
+import Title from "~/components/Title";
 import { CardMenu } from "~/components/Card";
-import { CartContext } from "../../App";
+import { CartContext } from "~/App";
 import { useContext } from "react";
 const cx = classNames.bind(styles);
 
 function Cart({ show, handleClose }) {
-    const { cart, setCart } = useContext(CartContext);
+    const { cart } = useContext(CartContext);
     return (
         <Offcanvas
             show={show}

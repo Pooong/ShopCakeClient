@@ -3,10 +3,10 @@ import styles from "./Navbar.module.scss";
 import { LiaShoppingBasketSolid } from "react-icons/lia";
 import { BsList } from "react-icons/bs";
 import Button from "~/components/Button";
-import Cart from "../../../Cart";
+import Cart from "../Cart";
 import Menu from "../../../Menu/Menu";
-import { useContext, useRef, useState } from "react";
-import { CartContext } from "~/App";
+import { useRef, useState } from "react";
+
 const cx = classNames.bind(styles);
 const items = [
     {
@@ -41,7 +41,6 @@ function Navbar() {
     const buttonRef = useRef();
     const [openMenu, setOpenMenu] = useState(false);
     const [showCart, setShowCart] = useState(false);
-    const { cart, setCart } = useContext(CartContext);
     const handleCloseCart = () => setShowCart(false);
     const handleShowCart = () => setShowCart(true);
 

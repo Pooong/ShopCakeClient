@@ -4,10 +4,11 @@ import Button from "~/components/Button";
 
 const cx = classNames.bind(styles);
 
-function CardAbout({ item }) {
+function CardAbout({ item, className }) {
     const classes = cx("wrapper", {
         right: item.aboutRight,
         center: item.aboutCenter,
+        ...className,
     });
 
     return (

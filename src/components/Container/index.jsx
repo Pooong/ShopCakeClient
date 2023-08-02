@@ -4,7 +4,7 @@ import { Row, Col } from "react-bootstrap";
 import { Card } from "~/components/Card";
 const cx = classNames.bind(styles);
 
-function Container({ items, sizeS, sizeM, sizeL, ...passprops }) {
+function Container({ items, sizeS, sizeM, sizeL, className, ...passprops }) {
     const props = {
         ...passprops,
     };
@@ -18,7 +18,10 @@ function Container({ items, sizeS, sizeM, sizeL, ...passprops }) {
         props.lg = sizeL;
     }
     return (
-        <div className={cx("wrapper")}>
+        <div
+            className={cx("wrapper", {
+                ...className,
+            })}>
             <Row className={"justify-content-center " + cx("row")} {...props}>
                 {items.map((item, index) => (
                     <Col
