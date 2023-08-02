@@ -19,6 +19,7 @@ const Button = forwardRef(
             //Size của Button
             small,
             large,
+            uppercase,
             className,
             children,
             ...passprops
@@ -43,6 +44,7 @@ const Button = forwardRef(
             outline,
             text,
             icon,
+            uppercase,
             small,
             large,
         });

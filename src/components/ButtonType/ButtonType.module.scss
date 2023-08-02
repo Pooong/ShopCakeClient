@@ -1,6 +1,7 @@
 .wrapper {
+    cursor: pointer;
     min-width: 80px;
-    transition: 0.3s all linear;
+    transition: 0.2s all linear;
     padding: 8px 0;
     border: 2px solid var(--pink);
     background-color: var(--pink);
@@ -33,5 +34,16 @@
     }
     + .wrapper {
         margin-left: 20px;
+    }
+}
+
+.active {
+    background-color: #fff;
+    .icon {
+        background-color: var(--pink);
+        color: var(--white);
+    }
+    .type {
+        color: var(--pink);
     }
 }

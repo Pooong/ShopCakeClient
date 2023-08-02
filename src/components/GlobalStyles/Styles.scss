@@ -76,3 +76,9 @@ img {
 .page {
     padding: 0 var(--df-padding-x);
 }
+
+.overflow-auto {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

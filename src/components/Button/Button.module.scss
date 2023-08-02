@@ -43,11 +43,16 @@
     }
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
 .small {
     min-width: 72px;
 }
 
 .large {
+    padding: 12px 4px;
     min-width: 144px;
 }
 

@@ -9,7 +9,6 @@ const cx = classNames.bind(styles);
 
 function Card({ item, className }) {
     const { cart, setCart } = useContext(CartContext);
-
     return (
         <Link className={cx("card", { ...className })}>
             <div className={cx("thumbnail")}>
