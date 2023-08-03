@@ -1,7 +1,7 @@
 import classNames from "classnames/bind";
 import { useEffect } from "react";
 import styles from "../Search.module.scss";
-import { CardMenu } from "~/components/Card";
+import { CardInSearch } from "~/components/Card";
 const cx = classNames.bind(styles);
 
 function SearchMenu({ items, searchRef, setShowResults, setSearchResults }) {
@@ -20,7 +20,7 @@ function SearchMenu({ items, searchRef, setShowResults, setSearchResults }) {
     return (
         <div className={cx("search-menu")}>
             {items.map((item, index) => (
-                <CardMenu key={index} item={item} small />
+                <CardInSearch key={index} item={item} small />
             ))}
         </div>
     );

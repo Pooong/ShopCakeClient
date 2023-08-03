@@ -17,7 +17,7 @@ function CardAbout({ item, className }) {
                 <img src={item.image} alt="" />
             </div>
             <div className={cx("content")}>
-                <h5>{item.title}</h5>
+                <h4>{item.title}</h4>
                 <span>{item.description}</span>
                 <Button primary large to={item.to} uppercase>
                     {item.button}

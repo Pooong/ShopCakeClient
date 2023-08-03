@@ -82,3 +82,22 @@ img {
         display: none;
     }
 }
+
+input[type="checkbox"] {
+    height: 16px;
+    width: 16px;
+}
+
+// Ẩn nút tăng giảm mặc định của Input number
+input[type="number"] {
+    -moz-appearance: textfield;
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    &::-ms-clear,
+    &::-ms-reveal {
+        display: none;
+    }
+}

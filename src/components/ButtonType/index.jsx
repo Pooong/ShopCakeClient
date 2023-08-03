@@ -11,7 +11,7 @@ function ButtonType({ item, active, ...props }) {
                 active: active,
             })}
             {...props}>
-            <Button icon small className={cx("icon")}>
+            <Button icon className={cx("icon")}>
                 <Icon />
             </Button>
             <span className={cx("type")}>{item.type}</span>

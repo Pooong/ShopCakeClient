@@ -66,7 +66,7 @@ function Navbar() {
                     ) : (
                         <></>
                     )}
-                    <Button icon>
+                    <Button icon large>
                         <LiaShoppingBasketSolid onClick={handleShowCart} />
                     </Button>
                 </div>
@@ -90,7 +90,7 @@ function Navbar() {
                             <></>
                         )}
                     </Button>
-                    <Button icon onClick={handleShowCart}>
+                    <Button icon large onClick={handleShowCart}>
                         <LiaShoppingBasketSolid />
                     </Button>
                 </div>

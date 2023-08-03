@@ -1,0 +1,21 @@
+.wrapper {
+    width: 108px;
+    border-radius: 5px;
+    display: flex;
+    border: 1px solid #ccc;
+    .button {
+        text-align: center;
+        font-weight: 600;
+        font-size: 16px;
+        height: 26px;
+        min-width: 26px;
+    }
+
+    input {
+        width: 56px;
+        text-align: center;
+        font-size: 14px;
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+    }
+}

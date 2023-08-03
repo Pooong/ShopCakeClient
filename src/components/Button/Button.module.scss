@@ -14,9 +14,9 @@
 
 .icon {
     padding: 0;
-    height: 44px;
-    min-width: 44px;
-    font-size: 2.8rem;
+    height: 40px;
+    min-width: 40px;
+    font-size: 2.4rem;
     border-radius: 50%;
 }
 
@@ -57,15 +57,15 @@
 }
 
 .icon.small {
-    height: 40px;
-    min-width: 40px;
-    font-size: 2.4rem;
+    height: 36px;
+    min-width: 36px;
+    font-size: 2.2rem;
 }
 
 .icon.large {
-    height: 48px;
-    min-width: 48px;
-    font-size: 3.2rem;
+    height: 44px;
+    min-width: 44px;
+    font-size: 2.8rem;
 }
 
 @media (max-width: 576px) {
