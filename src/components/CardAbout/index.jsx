@@ -8,7 +8,7 @@ function CardAbout({ item, className }) {
     const classes = cx("wrapper", {
         right: item.aboutRight,
         center: item.aboutCenter,
-        ...className,
+        [className]: className,
     });
 
     return (

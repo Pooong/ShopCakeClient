@@ -1,0 +1,60 @@
+.content {
+    padding: 36px 48px;
+    display: flex;
+}
+
+.thumbnail {
+    min-width: 240px;
+    width: calc(100% / 3);
+    margin-right: 24px;
+}
+
+.infor {
+    display: flex;
+    width: calc((100% / 3) * 2);
+    flex-direction: column;
+    .name {
+        margin-top: 8px;
+        color: var(--primary);
+    }
+    .description,
+    .quantity,
+    .action {
+        margin-top: 24px;
+        h3 {
+            margin: 0;
+            display: block;
+            font-weight: 700;
+            margin-right: 24px;
+        }
+    }
+    .description {
+        span {
+            display: block;
+            margin-top: 16px;
+        }
+    }
+    .quantity {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .action {
+        margin-top: 48px;
+        display: flex;
+    }
+}
+
+@media (max-width: 576px) {
+    .content {
+        padding: 24px 12px 12px;
+        flex-direction: column;
+    }
+    .thumbnail {
+        margin-right: 0;
+        width: 100%;
+    }
+    .infor {
+        width: 100%;
+    }
+}

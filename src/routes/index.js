@@ -2,6 +2,7 @@ import Home from "~/components/pages/Home";
 import About from "~/components/pages/About";
 import CreateProduct from "~/components/pages/CreateProduct";
 import Product from "~/components/pages/Product";
+import ProductDetail from "../components/pages/ProductDetail";
 const publicRoutes = [
     {
         path: "/",
@@ -23,6 +24,10 @@ const publicRoutes = [
     {
         path: "/about",
         component: About,
+    },
+    {
+        path: "/product/:slug",
+        component: ProductDetail,
     },
 ];
 

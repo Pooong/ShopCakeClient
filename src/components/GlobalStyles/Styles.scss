@@ -77,6 +77,10 @@ img {
     padding: 0 var(--df-padding-x);
 }
 
+.main {
+    margin-top: var(--df-layout-header-h);
+}
+
 .overflow-auto {
     &::-webkit-scrollbar {
         display: none;

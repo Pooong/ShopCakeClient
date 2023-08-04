@@ -52,8 +52,13 @@
 }
 
 .large {
-    padding: 12px 4px;
-    min-width: 144px;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 12px 12px;
+    min-width: 156px;
+    + .large {
+        margin-left: 12px;
+    }
 }
 
 .icon.small {
@@ -71,5 +76,9 @@
 @media (max-width: 576px) {
     .wrapper + .wrapper {
         margin-left: 4px;
+    }
+
+    .large + .large {
+        margin-left: 12px;
     }
 }

@@ -3,12 +3,11 @@ import styles from "./Title.module.scss";
 
 const cx = classNames.bind(styles);
 
-function Title({ small, large, primary, center, children }) {
+function Title({ primary, center, children, className }) {
     const classes = cx("title", {
         primary,
-        small,
-        large,
         center,
+        [className]: className,
     });
 
     return (

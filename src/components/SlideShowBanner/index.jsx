@@ -1,10 +1,10 @@
 import Carousel from "react-bootstrap/Carousel";
 import classNames from "classnames/bind";
-import styles from "./Slider.module.scss";
+import styles from "./SlideShowBanner.module.scss";
 
 const cx = classNames.bind(styles);
 
-function Slide({ items }) {
+function SlideShowBanner({ items }) {
     return (
         <Carousel data-bs-theme="dark">
             {items.map((item, index) => {
@@ -22,4 +22,4 @@ function Slide({ items }) {
     );
 }
 
-export default Slide;
+export default SlideShowBanner;

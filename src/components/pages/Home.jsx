@@ -1,6 +1,6 @@
-import Slide from "~/components/Slide";
 import Container from "~/components/Container";
 import Title from "~/components/Title";
+import SlideShowBanner from "~/components/SlideShowBanner";
 
 import CardAbout from "~/components/CardAbout";
 import { useEffect, useState } from "react";
@@ -81,7 +81,7 @@ function Home() {
 
     return (
         <>
-            <Slide items={banner} />
+            <SlideShowBanner items={banner} />
             <div className="page">
                 <Title primary>Our Hot Dishes</Title>
                 <Container items={products} sizeS={2} sizeM={3} sizeL={4} />

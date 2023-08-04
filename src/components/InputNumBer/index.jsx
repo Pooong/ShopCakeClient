@@ -3,10 +3,19 @@ import Button from "~/components/Button";
 import styles from "./InputNumber.module.scss";
 
 const cx = classNames.bind(styles);
-function InputNumber({ value, setReduceValue, setIncreaseValue, onChange }) {
+function InputNumber({
+    large = false,
+    value,
+    setReduceValue,
+    setIncreaseValue,
+    onChange,
+}) {
     // console.log(setReduceValue);
     return (
-        <div className={cx("wrapper")}>
+        <div
+            className={cx("wrapper", {
+                large,
+            })}>
             <Button
                 icon
                 small

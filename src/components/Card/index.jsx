@@ -20,7 +20,7 @@ function Card({ item, className }) {
     const { setCart } = useContext(CartContext);
 
     return (
-        <Link className={cx("card", { ...className })}>
+        <Link className={cx("card", { [className]: className })}>
             <div className={cx("thumbnail")}>
                 <img src={item.image} alt="" />
             </div>
